@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="description"
+      content="Proyecto Tu Super-Web, una plataforma de productos con carrito de compras, reseñas y contacto.">
+   <meta name="keywords" content="Tu Super, productos, carrito de compras, reseñas, contacto">
+   <meta name="author" content="Elio Cavalieri - Pre-Entrega - comision: Front End - 25016">
+
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <title>Proyecto Tu Super-Web</title>
+   <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;900&display=swap" rel="stylesheet">
+
+   <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+   <!-- HEADER -->
+   <header>
+      <div class="header">
+         <a class="icono" href="#">
+            <img class="logo" src="./assets/img/cesta-de-la-compra.png" alt="imagen del logo de la empresa">
+         </a>
+         <h1>Tu Super en la Web</h1>
+      </div>
+      <!-- NAV -->
+      <nav>
+         <ul>
+            <li>
+               <a class="a1" href="#">Inicio</a>
+            </li>
+            <li>
+               <a class="a2" href="#productos">Productos</a>
+            </li>
+            <li>
+               <a class="a3" href="#contacto">Contacto</a>
+            </li>
+            <li>
+               <a class="a4" href="#reseñas">Reseñas</a>
+            </li>
+            <li>
+               <a href="./pages/carrito.html" target="_blank">Carrito</a>
+            </li>
+         </ul>
+      </nav>
+   </header>
+
+   <!-- MAIN -->
+   <main>
+      <!-- <img src="./assets/img/logo.png" alt=""> -->
+      <br><br><br>
+      <h2>Bienvenido a nuestra plataforma de productos</h2>
+
+      <form action="#">
+
+         <input type="text" placeholder="Buscar producto...">
+         <button>Buscar</button>
+
+      </form>
+   </main>
+
+   <!-- SECTION -->
+   <section>
+      <h2>Productos</h2>
+
+      <div id="productos" class="product">
+
+         <div class="card">
+            <!-- <a href="./pages/productos.html"> -->
+            <h3>Pollos, carnes</h3>
+            <img src="./assets/img/chicken.png" alt="">
+            <p>Precio: desde $5.000,-</p>
+            <button>Añadir carrito</button>
+            <!-- </a> -->
+         </div>
+
+         <div class="card">
+            <h3>Quesos, huevos</h3>
+            <img src="./assets/img/cheese.png" alt="">
+            <p>Precio: desde $3.000,-</p>
+            <button>Añadir carrito</button>
+         </div>
+
+         <div class="card">
+            <h3>Bebidas, alcohol, jugos</h3>
+            <img src="./assets/img/alcohol.png" alt="">
+            <p>Precio: desde $2.000,--</p>
+            <button>Añadir carrito</button>
+         </div>
+
+         <div class="card">
+            <h3>Caramelos, golosinas</h3>
+            <img src="./assets/img/candies.png" alt="">
+            <p>Precio: desde $1.000,--</p>
+            <button>Añadir carrito</button>
+         </div>
+
+         <div class="card">
+            <h3>Articulos de limpieza</h3>
+            <img src="./assets/img/cleaning.png" alt="">
+            <p>Precio: desde $2.500,--</p>
+            <button>Añadir carrito</button>
+         </div>
+      </div>
+   </section>
+
+   <section>
+      <h2 id="reseñas">Reseñas</h2>
+      <div class="reseñas-container">
+         <div class="reseñas-card">
+            <article class="reseña">
+               <h3>Pedro Picapiedra</h3>
+               <p class="reseñas-description">"Los mejores productos que he comprado."</p>
+            </article>
+         </div>
+         <div class="reseñas-card">
+            <article class="reseña">
+               <h3>Ana Maria Pichio</h3>
+               <p class="reseñas-description">"Excelente selección y entrega rápida. ¡Muy recomendados!"</p>
+            </article>
+         </div>
+         <div class="reseñas-card">
+            <article class="reseña">
+               <h3>Carmen Sandiego</h3>
+               <p class="reseñas-description">"La calidad de los productos es increíble, volveré a comprar."
+               </p>
+            </article>
+         </div>
+         <div class="reseñas-card">
+            <article class="reseña">
+               <h3>Pepe Argento</h3>
+               <p class="reseñas-description">"Encontré los productos que necesitaba y todo fresco."</p>
+            </article>
+         </div>
+         <div class="reseñas-card">
+            <article class="reseña">
+               <h3>Papo Blues</h3>
+               <p class="reseñas-description">"Muy buena relación precio-calidad. Es mi Super-Web!"</p>
+            </article>
+         </div>
+         <div class="reseñas-card">
+            <article class="reseña">
+               <h3>Celeste Cielo</h3>
+               <p class="reseñas-description">"La página es fácil de usar y el proceso de compra rápido."
+               </p>
+            </article>
+         </div>
+      </div>
+   </section>
+
+
+   <section class="contacto-section">
+      <h2 id=contacto>Contacto</h2>
+      <form action="#" method="post">
+         <div class="input-group">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+         </div>
+         <div class="input-group">
+            <label for="correo">Correo Electrónico:</label>
+            <input type="email" id="correo" name="correo" required>
+         </div>
+         <div class="input-group">
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+         </div>
+         <button type="submit">Enviar</button>
+      </form>
+   </section>
+
+   <span>
+      <video controls width="500px" height="300px">
+         <source src="./assets/img/video_compra_online.mp4" type="video/mp4">
+      </video>
+   </span>
+
+   <div id="Inicio">
+      <a class="icono" href="#">
+         <img class="logo" src="./assets/img/cesta-de-la-compra.png" alt="imagen del logo de la empresa">Ir al inicio
+      </a>
+   </div>
+   <!-- FOOTER -->
+   <footer>
+      <br>
+      <div class="flex-footer">
+         <div class="footer-info">
+            <div class="footer-info-item">
+               <i class="fa-solid fa-phone"></i>
+               <p>Teléfono: +54 9 11 1234 5678</p>
+            </div>
+            <div class="footer-info-item">
+               <i class="fa-solid fa-envelope"></i>
+               <p>Podés contactarnos en:
+                  <a href="mailto:Tusuperweb@gmail.com">Tusuperweb@gmail.com</a>
+               </p>
+            </div>
+            <br>
+            <a href="https://www.whatsapp.com/?lang=es_LA" target="_blank">
+               <img src="./assets/img/whatsapp.png" alt="whatsapp">
+            </a>
+            <a href="https://www.facebook.com/" target="_blank">
+               <img src="./assets/img/facebook.png" alt="facebook">
+            </a>
+            <a href="https://www.instagram.com/" target="_blank">
+               <img src="./assets/img/instagram.png" alt="instagram">
+            </a>
+            <a href="https://www.twitter.com/" target="_blank">
+               <img src="./assets/img/twitter.png" alt="twitter">
+            </a>
+            <p>&copy; 2025 Tu Super Web - Todos los derechos reservados</p>
+            <br>
+   </footer>
+
+</body>
+
+</html>
