@@ -21,12 +21,60 @@ body {
       flex-direction: column;
       align-items: center;
 
+      .header {
+         display: flex;
+         justify-content: space-around;
+         margin-top: 1rem;
+         width: 100%;
+
+         img {
+            width: 7rem;
+            height: auto;
+         }
+
+         .icon-carrito {
+            position: relative;
+            top: 0.25rem;
+            right: -2rem;
+
+            a {
+               border: none;
+               padding: 1.25rem 0.75rem 0.5rem;
+               color: var(--color-text);
+
+               .count {
+                  position: absolute;
+                  bottom: 0.5rem;
+                  left: 0;
+                  font-size: 12px;
+                  color: var(--color-background);
+                  background-color: var(--color-text);
+                  padding: 0 0.25rem;
+                  border: 1px solid var(---color-background);
+                  border-radius: 50%;
+               }
+            }
+
+            a:hover {
+               border-radius: 50%;
+               color: var(--color-background);
+               background-color: var(--color-text);
+
+               .count {
+                  color: var(--colorText);
+                  background-color: var(--color-background);
+                  border: 1px solid var(--color-text);
+               }
+            }
+         }
+      }
+
       nav {
          margin: 2rem auto 1rem;
          display: flex;
          align-items: center;
          justify-content: center;
-         gap: 2rem;    
+         gap: 2rem;
          font-size: 1.2rem;
 
          ul {
@@ -37,20 +85,20 @@ body {
             gap: 1rem;
 
             li {
-               color: var(--color-text);
-               border: 1px solid var(--color-text);
+               color: var(--color-primary);
+               border: 1px solid var(--color-primary);
                border-radius: 2rem;
                padding: 0.25rem 1rem;
                text-align: center;
 
                a {
                   text-decoration: none;
-                  color: var(--color-text);
+                  color: var(--color-primary);
                }
             }
          }
       }
-
+/*
       .header {
          font-family: Verdana, Geneva, Tahoma, sans-serif;
          display: flex;
@@ -64,7 +112,14 @@ body {
             width: 7rem;
             height: auto;
          }
-      }
+*/
+         .subtitulo {
+            display: flex;
+            margin-top: 4rem;
+            /* o 20px, o 2em según prefieras*/
+            text-align: center;
+         }
+      
    }
 
    main {
@@ -106,10 +161,10 @@ body {
                width: 100%;
                height: auto;
             }
+         }
 
-            :hover {
-               transform: scale(1.1);
-            }
+         .card:hover {
+            transform: scale(1.1);
          }
       }
 
@@ -152,7 +207,8 @@ body {
             color: var(--color-text);
          }
 
-         input, textarea {
+         input,
+         textarea {
             width: 100%;
             max-width: 300px;
             padding: 0.5rem;
@@ -164,6 +220,7 @@ body {
          textarea {
             height: 100px;
          }
+
          button {
             margin-top: 1rem;
             background-color: var(--color-primary);
@@ -202,55 +259,96 @@ body {
       align-items: center;
       height: 50vh;
    }
-}
 
-#Inicio {
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   justify-content: center;
+   #Inicio {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
 
-   img {
-      width: 3rem;
-   }
-}
-
-footer {
-   text-align: center;
-   margin: 1rem auto;
-
-   img {
-      width: 2rem;
-      height: auto;
-   }
-}
-
-@media(max-width: 600px) {
-   .product {
-      grid-template-columns: repeat(auto-fit, minmax(2, 1fr));
-   }
-
-   nav {
-      ul {
-         flex-direction: column;
-         align-items: center;
-         margin-left: 1rem;
-         font-size: 1rem;
+      img {
+         width: 2rem;
       }
    }
-}
 
-@media(max-width: 400px) {
-   .product {
-      grid-template-columns: repeat(auto-fit, minmax(0.5, 1fr));
-   }
+      footer {
+         text-align: center;
+         margin: 1rem auto;
 
-   nav {
-      ul {
-         flex-direction: column;
-         align-items: center;
-         margin-left: 1rem;
-         font-size: 1rem;
+         img {
+            width: 2rem;
+            height: auto;
+         }
       }
-   }
+
+      .tableProduct {
+         display: flex;
+         justify-content: center;
+         flex-direction: column;
+         margin: 0 auto;
+         width: 40rem;
+
+         .table {
+            thead {
+               background-color: var(--color-text);
+               color: var(--color-secondary);
+
+               tr th {
+                  border-radius: 10px;
+                  padding: 0.5rem;
+               }
+            }
+
+            tbody {
+               background-color: var(--color-secondary);
+               color: var(--color-text);
+               font-weight: 500;
+
+               tr td {
+                  border: 1px solid var(--color-secondary);
+                  border-radius: 10px;
+                  padding: 0.5rem;
+               }
+            }
+         }
+
+         p {
+            font-size: 1.2rem;
+            color: var(--color-text);
+            font-weight: 600;
+            margin-top: 1rem;
+            text-align: end;
+         }
+      }
+
+      @media(max-width: 600px) {
+         .product {
+            grid-template-columns: repeat(auto-fit, minmax(2, 1fr));
+         }
+
+         nav {
+            ul {
+               flex-direction: column;
+               align-items: center;
+               margin-left: 1rem;
+               font-size: 1rem;
+            }
+         }
+      }
+
+      @media(max-width: 400px) {
+         .product {
+            grid-template-columns: repeat(auto-fit, minmax(0.5, 1fr));
+         }
+
+         nav {
+            ul {
+               flex-direction: column;
+               align-items: center;
+               margin-left: 1rem;
+               font-size: 1rem;
+            }
+         }
+      }
+   
 }

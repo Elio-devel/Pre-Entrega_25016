@@ -7,7 +7,7 @@
    <meta name="description"
       content="Proyecto Tu Super-Web, una plataforma de productos con carrito de compras, reseñas y contacto.">
    <meta name="keywords" content="Tu Super, productos, carrito de compras, reseñas, contacto">
-   <meta name="author" content="Elio Cavalieri - Pre-Entrega - comision: Front End - 25016">
+   <meta name="author" content="Elio Cavalieri - Proyecto Final - comision: Front End - 25016">
 
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <title>Proyecto Tu Super-Web</title>
@@ -27,6 +27,15 @@
             <img class="logo" src="./assets/img/cesta-de-la-compra.png" alt="imagen del logo de la empresa">
          </a>
          <h1>Tu Super en la Web</h1>
+         <div class="icon-carrito">
+            <a href="./pages/carrito.html" onclick="handleCart()">
+               <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24">
+                  <path fill="currentColor"
+                     d="M16 18a2 2 0 0 1 2 2a2 2 0 0 1-2 2a2 2 0 0 1-2-2a2 2 0 0 1 2-2m0 1a1 1 0 0 0-1 1a1 1 0 0 0 1 1a1 1 0 0 0 1-1a1 1 0 0 0-1-1m-9-1a2 2 0 0 1 2 2a2 2 0 0 1-2 2a2 2 0 0 1-2-2a2 2 0 0 1 2-2m0 1a1 1 0 0 0-1 1a1 1 0 0 0 1 1a1 1 0 0 0 1-1a1 1 0 0 0-1-1M18 6H4.27l2.55 6H15c.33 0 .62-.16.8-.4l3-4c.13-.17.2-.38.2-.6a1 1 0 0 0-1-1m-3 7H6.87l-.77 1.56L6 15a1 1 0 0 0 1 1h11v1H7a2 2 0 0 1-2-2a2 2 0 0 1 .25-.97l.72-1.47L2.34 4H1V3h2l.85 2H18a2 2 0 0 1 2 2c0 .5-.17.92-.45 1.26l-2.91 3.89c-.36.51-.96.85-1.64.85" />
+               </svg>
+               <div class="count"></div>
+            </a>
+         </div>
       </div>
       <!-- NAV -->
       <nav>
@@ -68,43 +77,51 @@
    <section>
       <h2>Productos</h2>
 
-      <div id="productos" class="product">
+      <div class="product">
 
          <div class="card">
-            <!-- <a href="./pages/productos.html"> -->
-            <h3>Pollos, carnes</h3>
-            <img src="./assets/img/chicken.png" alt="">
-            <p>Precio: desde $5.000,-</p>
-            <button>Añadir carrito</button>
-            <!-- </a> -->
+            <a href="./pages/productos.html">
+               <h3>Pollos, carnes</h3>
+               <img src="./assets/img/chicken.png" alt="">
+               <p>Precio: $5000.00</p>
+            </a>
+            <button id="btn-carrito">Añadir carrito</button>
          </div>
 
          <div class="card">
-            <h3>Quesos, huevos</h3>
-            <img src="./assets/img/cheese.png" alt="">
-            <p>Precio: desde $3.000,-</p>
-            <button>Añadir carrito</button>
+            <a href="./pages/productos.html">
+               <h3>Quesos, huevos</h3>
+               <img src="./assets/img/cheese.png" alt="">
+               <p>Precio: $3000.00</p>
+            </a>
+            <button id="btn-carrito1">Añadir carrito</button>
          </div>
 
          <div class="card">
-            <h3>Bebidas, alcohol, jugos</h3>
-            <img src="./assets/img/alcohol.png" alt="">
-            <p>Precio: desde $2.000,--</p>
-            <button>Añadir carrito</button>
+            <a href="./pages/productos.html">
+               <h3>Bebidas, alcohol, jugos</h3>
+               <img src="./assets/img/alcohol.png" alt="">
+               <p>Precio: $2000.00</p>
+            </a>
+            <button id="btn-carrito2">Añadir carrito</button>
          </div>
 
          <div class="card">
-            <h3>Caramelos, golosinas</h3>
-            <img src="./assets/img/candies.png" alt="">
-            <p>Precio: desde $1.000,--</p>
-            <button>Añadir carrito</button>
+            <a href="./pages/productos.html">
+               <h3>Caramelos, golosinas</h3>
+               <img src="./assets/img/candies.png" alt="">
+               <p>Precio: $1000.00</p>
+            </a>
+            <button id="btn-carrito3">Añadir carrito</button>
          </div>
 
          <div class="card">
-            <h3>Articulos de limpieza</h3>
-            <img src="./assets/img/cleaning.png" alt="">
-            <p>Precio: desde $2.500,--</p>
-            <button>Añadir carrito</button>
+            <a href="./pages/productos.html">
+               <h3>Articulos de limpieza</h3>
+               <img src="./assets/img/cleaning.png" alt="">
+               <p>Precio: $2500.00</p>
+            </a>
+            <button id="btn-carrito4">Añadir carrito</button>
          </div>
       </div>
    </section>
@@ -181,6 +198,7 @@
 
    <div id="Inicio">
       <a class="icono" href="#">
+         <br>
          <img class="logo" src="./assets/img/cesta-de-la-compra.png" alt="imagen del logo de la empresa">Ir al inicio
       </a>
    </div>
@@ -188,33 +206,38 @@
    <footer>
       <br>
       <div class="flex-footer">
-         <div class="footer-info">
-            <div class="footer-info-item">
-               <i class="fa-solid fa-phone"></i>
-               <p>Teléfono: +54 9 11 1234 5678</p>
-            </div>
-            <div class="footer-info-item">
-               <i class="fa-solid fa-envelope"></i>
-               <p>Podés contactarnos en:
-                  <a href="mailto:Tusuperweb@gmail.com">Tusuperweb@gmail.com</a>
-               </p>
-            </div>
-            <br>
-            <a href="https://www.whatsapp.com/?lang=es_LA" target="_blank">
-               <img src="./assets/img/whatsapp.png" alt="whatsapp">
-            </a>
-            <a href="https://www.facebook.com/" target="_blank">
-               <img src="./assets/img/facebook.png" alt="facebook">
-            </a>
-            <a href="https://www.instagram.com/" target="_blank">
-               <img src="./assets/img/instagram.png" alt="instagram">
-            </a>
-            <a href="https://www.twitter.com/" target="_blank">
-               <img src="./assets/img/twitter.png" alt="twitter">
-            </a>
-            <p>&copy; 2025 Tu Super Web - Todos los derechos reservados</p>
-            <br>
+         <br class="footer-info">
+         <div class="footer-info-item">
+            <i class="fa-solid fa-phone"></i>
+            <p>Teléfono: +54 9 11 1234 5678</p>
+         </div>
+         <div class="footer-info-item">
+            <i class="fa-solid fa-envelope"></i>
+            <p>Podés contactarnos en:
+               <a href="mailto:Tusuperweb@gmail.com">Tusuperweb@gmail.com</a>
+            </p>
+         </div>
+         <br>
+         <a href="https://www.whatsapp.com/?lang=es_LA" target="_blank">
+            <img src="./assets/img/whatsapp.png" alt="whatsapp">
+         </a>
+         <a href="https://www.facebook.com/" target="_blank">
+            <img src="./assets/img/facebook.png" alt="facebook">
+         </a>
+         <a href="https://www.instagram.com/" target="_blank">
+            <img src="./assets/img/instagram.png" alt="instagram">
+         </a>
+         <a href="https://www.twitter.com/" target="_blank">
+            <img src="./assets/img/twitter.png" alt="twitter">
+         </a>
+         <br>
+         <br>
+         <p>&copy; 2025 Tu Super Web - Todos los derechos reservados</p>
+         <br>
    </footer>
+
+   <script src="./js/main.js"></script>
+   <script src="./js/dom.js"></script>
 
 </body>
 

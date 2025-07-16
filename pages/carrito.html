@@ -1,12 +1,110 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="description"
+      content="Proyecto Tu Super-Web, una plataforma de productos con carrito de compras, reseñas y contacto.">
+   <meta name="keywords" content="Tu Super, productos, carrito de compras, reseñas, contacto">
+   <meta name="author" content="Elio Cavalieri - Proyecto Final - comision: Front End - 25016">
+
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <title>Carrito</title>
+   <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;900&display=swap" rel="stylesheet">
+
+   <link rel="stylesheet" href="../css/style.css">
 </head>
+
 <body>
-   <h1>Proximamente...</h1>
-   <h2>Tu carrito de compra de los mejores productos...</h2>
+
+   <!-- HEADER -->
+   <header>
+      <div class="header">
+         <a class="icono" href="#">
+            <img class="logo" src="../assets/img/cesta-de-la-compra.png" alt="imagen del logo de la empresa">
+         </a>
+         <h1>Tu Super en la Web</h1>
+
+         <h2 class="subtitulo">Tu carrito de compra de los mejores productos...</h2>
+
+         <div class="icon-carrito">
+            <a href="../pages/carrito.html" onclick="handleCart()">
+               <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24">
+                  <path fill="currentColor"
+                     d="M16 18a2 2 0 0 1 2 2a2 2 0 0 1-2 2a2 2 0 0 1-2-2a2 2 0 0 1 2-2m0 1a1 1 0 0 0-1 1a1 1 0 0 0 1 1a1 1 0 0 0 1-1a1 1 0 0 0-1-1m-9-1a2 2 0 0 1 2 2a2 2 0 0 1-2 2a2 2 0 0 1-2-2a2 2 0 0 1 2-2m0 1a1 1 0 0 0-1 1a1 1 0 0 0 1 1a1 1 0 0 0 1-1a1 1 0 0 0-1-1M18 6H4.27l2.55 6H15c.33 0 .62-.16.8-.4l3-4c.13-.17.2-.38.2-.6a1 1 0 0 0-1-1m-3 7H6.87l-.77 1.56L6 15a1 1 0 0 0 1 1h11v1H7a2 2 0 0 1-2-2a2 2 0 0 1 .25-.97l.72-1.47L2.34 4H1V3h2l.85 2H18a2 2 0 0 1 2 2c0 .5-.17.92-.45 1.26l-2.91 3.89c-.36.51-.96.85-1.64.85" />
+               </svg>
+               <div class="count"></div>
+            </a>
+         </div>
+      </div>
+      <!-- NAV -->
+      <nav>
+         <ul>
+            <li>
+               <a class="a1" href="../index.html">Inicio</a>
+            </li>
+            <li>
+               <a class="a2" href="./productos.html">Productos</a>
+            </li>
+            <li>
+               <a class="a3" href="./contactos.html">Contacto</a>
+            </li>
+            <li>
+               <a class="a4" href="./resenas.html">Reseñas</a>
+            </li>
+            <li>
+               <a href="./carrito.html" target="_blank">Carrito</a>
+            </li>
+         </ul>
+      </nav>
+   </header>
+
+   <section class="tableProduct" id="item-products">
+
+      <h2>Sección de Productos</h2>
+      <button onclick="limpiarCarrito()">Limpiar Carrito</button>
+
+   </section>
+
+      <footer>
+      <br>
+      <div class="flex-footer">
+         <div class="footer-info">
+            <div class="footer-info-item">
+               <i class="fa-solid fa-phone"></i>
+               <p>Teléfono: +54 9 11 1234 5678</p>
+            </div>
+            <div class="footer-info-item">
+               <i class="fa-solid fa-envelope"></i>
+               <p>Podés contactarnos en:
+                  <a href="mailto:Tusuperweb@gmail.com">Tusuperweb@gmail.com</a>
+               </p>
+            </div>
+            <br>
+            <a href="https://www.whatsapp.com/?lang=es_LA" target="_blank">
+               <img src="..//assets/img/whatsapp.png" alt="whatsapp">
+            </a>
+            <a href="https://www.facebook.com/" target="_blank">
+               <img src="../assets/img/facebook.png" alt="facebook">
+            </a>
+            <a href="https://www.instagram.com/" target="_blank">
+               <img src="../assets/img/instagram.png" alt="instagram">
+            </a>
+            <a href="https://www.twitter.com/" target="_blank">
+               <img src="../assets/img/twitter.png" alt="twitter">
+            </a>
+            <br>
+            <br>
+            <p>&copy; 2025 Tu Super Web - Todos los derechos reservados</p>
+            <br>
+   </footer>
+
+   <script src="../js/carrito.js"></script>
+
 </body>
+
 </html>
